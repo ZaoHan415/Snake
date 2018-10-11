@@ -117,8 +117,11 @@ void Snake::keyPressEvent(QKeyEvent *key)
 void Snake::get_food(QPointF* f)
 {
     double d = distance(*f,hea_pos);
-    if(d<side_length/1.7)    {
+    if(d<side_length/1.5)    {
         eat();
+        time_step -= 15;
+        timer->stop();
+        timer->start(time_step);
         emit food_eaten();
     }
 }
