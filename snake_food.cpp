@@ -26,7 +26,7 @@ void snake_food::regenerate()
     QRandomGenerator s(QTime(0,0,0).secsTo(QTime::currentTime()));
     double temp = s.generateDouble()*500;
     position.setX(temp);
-    qDebug()<<temp<<" ";
+    //qDebug()<<temp<<" ";
     temp = s.generateDouble()*500;
     position.setY(temp);
     //qDebug()<<temp<<endl;
